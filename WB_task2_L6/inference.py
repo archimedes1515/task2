@@ -53,7 +53,7 @@ if __name__ == '__main__':
         column_transformer = pickle.load(f1)
     with open('bow_vectorizer.pkl', 'rb') as f2:  # подгрузим готовый векторайзер текстов
         vectorizer = pickle.load(f2)
-    with open('knn_bow_cv1.pkl', 'rb') as f3:  # подгрузим обученную модель
+    with open('lr_bow_cv1.pkl', 'rb') as f3:  # подгрузим обученную модель
         model = pickle.load(f3)
 
     X = full_preprocess(df, column_transformer, vectorizer)  # выполним полную подготовку данных к инференсу
